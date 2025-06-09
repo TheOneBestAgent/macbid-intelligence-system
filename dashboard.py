@@ -324,9 +324,9 @@ if __name__ == '__main__':
     monitor_thread.start()
     
     logger.info("🚀 Mac.bid Intelligence System Command Center Starting...")
-    logger.info("📊 Dashboard available at: http://localhost:5000")
-    logger.info("🔧 Control Panel: http://localhost:5000/control")
-    logger.info("📈 Analytics: http://localhost:5000/analytics")
+    logger.info("📊 Dashboard available at: http://localhost:8080")
+    logger.info("🔧 Control Panel: http://localhost:8080/control")
+    logger.info("📈 Analytics: http://localhost:8080/analytics")
     
     # Run the Flask app with SocketIO
-    socketio.run(app, host='0.0.0.0', port=5000, debug=True) 
+    socketio.run(app, host='0.0.0.0', port=8080, debug=True) 
