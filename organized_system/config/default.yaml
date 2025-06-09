@@ -1,0 +1,98 @@
+scraping:
+  timeout: 30
+  rate_limit: 1.0  # seconds between requests
+  user_agent: "API-Endpoint-Scraper/1.0"
+  respect_robots_txt: true
+  max_concurrent: 10
+  retry_attempts: 3
+  retry_delay: 2.0
+  
+  # Browser settings for dynamic content
+  browser:
+    headless: true
+    browser_type: "chromium"  # chromium, firefox, webkit
+    viewport:
+      width: 1920
+      height: 1080
+    wait_for_load: 3.0  # seconds to wait after page load
+
+extraction:
+  # Patterns for different API types
+  patterns:
+    rest_api: 
+      - "api/v\\d+/"
+      - "/api/"
+      - "rest/"
+      - "/v\\d+/"
+      - "service/"
+      - "endpoint/"
+    graphql:
+      - "graphql"
+      - "graph"
+      - "gql"
+    websocket:
+      - "ws://"
+      - "wss://"
+      - "socket.io"
+      - "websocket"
+    
+  # Analysis methods
+  javascript_analysis: true
+  network_monitoring: true
+  source_map_analysis: false
+  documentation_parsing: true
+  
+  # Confidence scoring
+  confidence_weights:
+    network_request: 0.9
+    javascript_call: 0.8
+    html_form: 0.7
+    documentation: 0.9
+    pattern_match: 0.6
+
+output:
+  format: "json"  # json, csv, html, markdown
+  file: "endpoints.json"
+  include_metadata: true
+  pretty_print: true
+  
+  # Report customization
+  include_sections:
+    summary: true
+    endpoints: true
+    statistics: true
+    raw_data: false
+  
+  # Output filtering
+  min_confidence: 0.5
+  exclude_static_assets: true
+  deduplicate: true
+
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "scraper.log"
+  console_output: true
+
+security:
+  verify_ssl: true
+  allow_redirects: true
+  max_redirects: 5
+  
+  # Proxy settings (optional)
+  proxy:
+    enabled: false
+    http: ""
+    https: ""
+  
+  # Authentication (optional)
+  auth:
+    enabled: false
+    type: "basic"  # basic, bearer, custom
+    credentials: {}
+
+performance:
+  memory_limit_mb: 500
+  cache_enabled: true
+  cache_size_mb: 100
+  parallel_processing: true 

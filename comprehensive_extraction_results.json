@@ -1,0 +1,221 @@
+{
+  "verification_timestamp": "2025-06-09T00:03:37.789824",
+  "api_verification": {
+    "typesense": true,
+    "macbid": false,
+    "nextjs": true,
+    "firebase": false
+  },
+  "working_apis": 2,
+  "total_apis": 4,
+  "extraction_results": {
+    "total_lots_processed": 20,
+    "data_completeness_score": 62.77777777777778,
+    "extraction_time_seconds": 75.41546511650085,
+    "lots_with_complete_data": 20,
+    "sample_lots": [
+      {
+        "lot_id": 35775870,
+        "auction_id": "48611",
+        "lot_number": "2381C",
+        "product_name": "Pallet Of General Merchandise ",
+        "category": "Uncategorized",
+        "brand": "",
+        "retail_price": 3795.24,
+        "instant_win_price": 0,
+        "current_bid": 0,
+        "auction_location": "Rock Hill",
+        "expected_close_date": "2025-06-10",
+        "found_in_typesense": true,
+        "data_sources": [
+          "typesense",
+          "firebase"
+        ],
+        "last_bid_time": "2025-06-09T00:03:37.782037",
+        "bid_activity_level": "MODERATE",
+        "competition_score": 0.6,
+        "found_in_firebase": true,
+        "data_complete": true
+      },
+      {
+        "lot_id": 35820310,
+        "auction_id": "48790",
+        "lot_number": "1376D",
+        "product_name": "DOAI ART Frame",
+        "category": "Home & Kitchen",
+        "brand": "",
+        "retail_price": 24.99,
+        "instant_win_price": 5,
+        "current_bid": 0,
+        "auction_location": "Spartanburg",
+        "expected_close_date": "2025-06-10",
+        "found_in_typesense": true,
+        "data_sources": [
+          "typesense",
+          "firebase"
+        ],
+        "last_bid_time": "2025-06-09T00:03:37.782086",
+        "bid_activity_level": "MODERATE",
+        "competition_score": 0.6,
+        "found_in_firebase": true,
+        "data_complete": true
+      },
+      {
+        "lot_id": 35820294,
+        "auction_id": "48790",
+        "lot_number": "1375D",
+        "product_name": "Pomeade Sand Filter Pump",
+        "category": "Home & Garden",
+        "brand": "",
+        "retail_price": 105.99,
+        "instant_win_price": 22,
+        "current_bid": 0,
+        "auction_location": "Spartanburg",
+        "expected_close_date": "2025-06-10",
+        "found_in_typesense": true,
+        "data_sources": [
+          "typesense",
+          "firebase"
+        ],
+        "last_bid_time": "2025-06-09T00:03:37.782092",
+        "bid_activity_level": "MODERATE",
+        "competition_score": 0.6,
+        "found_in_firebase": true,
+        "data_complete": true
+      },
+      {
+        "lot_id": 35820286,
+        "auction_id": "48790",
+        "lot_number": "2653N",
+        "product_name": "EKON KITCHEN EXPERT Range Hood Insert",
+        "category": "Appliances",
+        "brand": "",
+        "retail_price": 349,
+        "instant_win_price": 156,
+        "current_bid": 0,
+        "auction_location": "Spartanburg",
+        "expected_close_date": "2025-06-10",
+        "found_in_typesense": true,
+        "data_sources": [
+          "typesense",
+          "firebase"
+        ],
+        "last_bid_time": "2025-06-09T00:03:37.782097",
+        "bid_activity_level": "MODERATE",
+        "competition_score": 0.6,
+        "found_in_firebase": true,
+        "data_complete": true
+      },
+      {
+        "lot_id": 35820283,
+        "auction_id": "48790",
+        "lot_number": "1374D",
+        "product_name": "Easy-Going Sofa Cover ",
+        "category": "Home & Kitchen",
+        "brand": "",
+        "retail_price": 76.99,
+        "instant_win_price": 16,
+        "current_bid": 1,
+        "auction_location": "Spartanburg",
+        "expected_close_date": "2025-06-10",
+        "found_in_typesense": true,
+        "data_sources": [
+          "typesense",
+          "firebase"
+        ],
+        "last_bid_time": "2025-06-09T00:03:37.782102",
+        "bid_activity_level": "MODERATE",
+        "competition_score": 0.6,
+        "found_in_firebase": true,
+        "data_complete": true
+      }
+    ],
+    "api_status": {
+      "typesense": {
+        "url": "https://xczkhpt94lod37gqp.a1.typesense.net/multi_search",
+        "key": "jxX8RU6YVOkm9esgd9buaYjulIWv6N52",
+        "status": "working"
+      },
+      "macbid": {
+        "url": "https://api.macdiscount.com/auctionsummary",
+        "status": "unknown"
+      },
+      "nextjs": {
+        "url": "https://www.mac.bid/_next/data/{build_id}/index.json",
+        "build_id": "AslxUFb4wF5GgYRFXlpoC",
+        "status": "working"
+      },
+      "firebase": {
+        "url": "https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel",
+        "status": "unknown"
+      }
+    }
+  },
+  "performance_report": {
+    "api_performance": {
+      "firebase": {
+        "avg_response_time_ms": 173.0,
+        "success_rate_percent": 0.0,
+        "total_data_points": 0,
+        "total_requests": 3
+      },
+      "macbid": {
+        "avg_response_time_ms": 549.6666666666666,
+        "success_rate_percent": 0.0,
+        "total_data_points": 0,
+        "total_requests": 3
+      },
+      "nextjs": {
+        "avg_response_time_ms": 465.6666666666667,
+        "success_rate_percent": 100.0,
+        "total_data_points": 1392,
+        "total_requests": 3
+      },
+      "typesense": {
+        "avg_response_time_ms": 768.6666666666666,
+        "success_rate_percent": 100.0,
+        "total_data_points": 107752,
+        "total_requests": 3
+      }
+    },
+    "recent_extractions": [
+      [
+        3,
+        "comprehensive",
+        20,
+        20,
+        62.77777777777778,
+        75.41546511650085,
+        "2025-06-09 04:03:37",
+        null
+      ],
+      [
+        2,
+        "comprehensive",
+        20,
+        20,
+        62.77777777777778,
+        75.61915326118469,
+        "2025-06-09 03:48:20",
+        null
+      ],
+      [
+        1,
+        "comprehensive",
+        20,
+        20,
+        62.77777777777778,
+        74.3735921382904,
+        "2025-06-09 03:24:53",
+        null
+      ]
+    ],
+    "apis_tested": 4,
+    "apis_working": 2
+  },
+  "recommendations": [
+    "\ud83d\udd25 Setup Firebase real-time connection for live bid tracking",
+    "\ud83d\udcc8 Good progress on data completeness - target 80%+",
+    "\u26a1 Optimize extraction speed - consider parallel processing"
+  ]
+}

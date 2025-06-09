@@ -1,0 +1,887 @@
+{
+  "processing_timestamp": "2025-06-09T15:19:58.401353",
+  "data_points_processed": 151,
+  "pattern_analysis": {
+    "patterns": {
+      "endpoint_frequency": {
+        "google_analytics": 33,
+        "advertising_doubleclick": 24,
+        "other": 15,
+        "advertising_stack": 15,
+        "nextjs_static": 48,
+        "auctions_page": 3,
+        "youtube_api": 3,
+        "ab_testing": 3,
+        "bing_tracking": 4,
+        "facebook_pixel": 3
+      },
+      "method_distribution": {
+        "GET": 151
+      },
+      "status_patterns": {
+        "200": 151
+      },
+      "timing_patterns": [
+        {
+          "timestamp": "2025-06-09T15:19:58.398424",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398429",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398430",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398432",
+          "endpoint": "other",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398433",
+          "endpoint": "advertising_stack",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398434",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398435",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398436",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398437",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398438",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398440",
+          "endpoint": "auctions_page",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398441",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398443",
+          "endpoint": "youtube_api",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398444",
+          "endpoint": "ab_testing",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398446",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398449",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398450",
+          "endpoint": "other",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398451",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398452",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398453",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398454",
+          "endpoint": "advertising_stack",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398456",
+          "endpoint": "bing_tracking",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398457",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398458",
+          "endpoint": "other",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398459",
+          "endpoint": "facebook_pixel",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398460",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398461",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398462",
+          "endpoint": "advertising_stack",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398463",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398464",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398465",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398467",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398468",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398469",
+          "endpoint": "other",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398470",
+          "endpoint": "advertising_stack",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398471",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398472",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398473",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398474",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398475",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398476",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398477",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398478",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398480",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398481",
+          "endpoint": "other",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398482",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398483",
+          "endpoint": "advertising_stack",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398484",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398485",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398487",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398488",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398489",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398490",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398491",
+          "endpoint": "other",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398492",
+          "endpoint": "advertising_stack",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398493",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398495",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398497",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398498",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398499",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398500",
+          "endpoint": "auctions_page",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398501",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398502",
+          "endpoint": "youtube_api",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398503",
+          "endpoint": "ab_testing",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398504",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398505",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398506",
+          "endpoint": "other",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398507",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398508",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398509",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398510",
+          "endpoint": "advertising_stack",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398511",
+          "endpoint": "bing_tracking",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398512",
+          "endpoint": "other",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398513",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398514",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398515",
+          "endpoint": "facebook_pixel",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398517",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398518",
+          "endpoint": "advertising_stack",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398519",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398520",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398521",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398522",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398523",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398524",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398525",
+          "endpoint": "other",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398527",
+          "endpoint": "advertising_stack",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398528",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398529",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398532",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398533",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398534",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398535",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398536",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398537",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398538",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398539",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398540",
+          "endpoint": "other",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398541",
+          "endpoint": "advertising_stack",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398542",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398543",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398544",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398545",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398547",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398548",
+          "endpoint": "other",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398549",
+          "endpoint": "advertising_stack",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398550",
+          "endpoint": "bing_tracking",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398551",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398552",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398553",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398554",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398555",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398556",
+          "endpoint": "auctions_page",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398557",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398558",
+          "endpoint": "youtube_api",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398559",
+          "endpoint": "ab_testing",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398560",
+          "endpoint": "other",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398561",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398562",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398563",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398575",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398580",
+          "endpoint": "other",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398582",
+          "endpoint": "bing_tracking",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398583",
+          "endpoint": "advertising_stack",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398584",
+          "endpoint": "facebook_pixel",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398586",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398587",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398588",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398589",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398598",
+          "endpoint": "advertising_stack",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398599",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398600",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398603",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398604",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398605",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398606",
+          "endpoint": "other",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398607",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398608",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398609",
+          "endpoint": "advertising_stack",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398610",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398611",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398612",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398613",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398614",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398615",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398616",
+          "endpoint": "advertising_doubleclick",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398617",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398618",
+          "endpoint": "nextjs_static",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398620",
+          "endpoint": "other",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398621",
+          "endpoint": "advertising_stack",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398622",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        },
+        {
+          "timestamp": "2025-06-09T15:19:58.398623",
+          "endpoint": "google_analytics",
+          "response_time": 0.5
+        }
+      ],
+      "data_flow_patterns": [],
+      "authentication_patterns": [],
+      "geographic_patterns": {
+        "Spartanburg": 21,
+        "Greenville": 18
+      }
+    },
+    "insights": [
+      {
+        "type": "endpoint_frequency",
+        "pattern": "google_analytics",
+        "frequency": 33,
+        "percentage": 21.85430463576159,
+        "significance": "medium",
+        "description": "google_analytics represents 21.9% of all requests"
+      },
+      {
+        "type": "endpoint_frequency",
+        "pattern": "advertising_doubleclick",
+        "frequency": 24,
+        "percentage": 15.894039735099339,
+        "significance": "medium",
+        "description": "advertising_doubleclick represents 15.9% of all requests"
+      },
+      {
+        "type": "endpoint_frequency",
+        "pattern": "nextjs_static",
+        "frequency": 48,
+        "percentage": 31.788079470198678,
+        "significance": "high",
+        "description": "nextjs_static represents 31.8% of all requests"
+      },
+      {
+        "type": "geographic_distribution",
+        "pattern": "Spartanburg",
+        "frequency": 21,
+        "percentage": 53.84615384615385,
+        "significance": "high",
+        "description": "Spartanburg accounts for 53.8% of location-specific requests"
+      },
+      {
+        "type": "geographic_distribution",
+        "pattern": "Greenville",
+        "frequency": 18,
+        "percentage": 46.15384615384615,
+        "significance": "high",
+        "description": "Greenville accounts for 46.2% of location-specific requests"
+      }
+    ]
+  },
+  "market_intelligence": {
+    "auction_activity": {
+      "total_auctions_detected": 151,
+      "active_locations": [
+        "Spartanburg",
+        "Greenville"
+      ],
+      "activity_levels": {
+        "Spartanburg": 21,
+        "Greenville": 18
+      },
+      "peak_activity_times": [],
+      "category_distribution": {}
+    },
+    "bidding_patterns": {},
+    "timing_intelligence": {
+      "request_frequency": {},
+      "peak_hours": [],
+      "response_time_patterns": {
+        "average": 0.5,
+        "median": 0.5,
+        "min": 0.5,
+        "max": 0.5,
+        "std_dev": 0.0
+      },
+      "session_duration_estimate": 0.000199
+    },
+    "competition_analysis": {
+      "concurrent_users_estimate": 0,
+      "server_load_indicators": {
+        "average_response_time": 0.5,
+        "load_level": "low",
+        "timeout_rate": 0.0
+      },
+      "popular_endpoints": {},
+      "traffic_patterns": {}
+    },
+    "opportunity_scoring": {
+      "overall_score": 79.0,
+      "location_scores": {},
+      "timing_scores": {},
+      "competition_scores": {},
+      "recommendations": [
+        "High opportunity environment - consider active bidding",
+        "Spartanburg shows high activity - priority location",
+        "Greenville shows high activity - priority location"
+      ]
+    }
+  },
+  "summary": {
+    "total_requests": 151,
+    "unique_endpoints": 10,
+    "opportunity_score": 79.0,
+    "processing_status": "complete"
+  },
+  "intelligence_report": "\ud83d\udcca ENHANCED DATA PROCESSING REPORT\n==================================================\n\n\ud83c\udfdb\ufe0f AUCTION ACTIVITY ANALYSIS\n   Total Auctions Detected: 151\n   Active Locations: Spartanburg, Greenville\n   Location Activity:\n     \u2022 Spartanburg: 21 requests\n     \u2022 Greenville: 18 requests\n\n\u23f0 TIMING INTELLIGENCE\n   Session Duration: 0.0 seconds\n   Average Response Time: 0.50s\n   Response Time Range: 0.50s - 0.50s\n\n\ud83c\udfc6 COMPETITION ANALYSIS\n   Server Load Level: LOW\n   Average Response Time: 0.50s\n   Timeout Rate: 0.0%\n\n\ud83c\udfaf OPPORTUNITY SCORING\n   Overall Opportunity Score: 79.0/100\n   Recommendations:\n     \u2022 High opportunity environment - consider active bidding\n     \u2022 Spartanburg shows high activity - priority location\n     \u2022 Greenville shows high activity - priority location\n\n\ud83d\udcc8 INTELLIGENCE SUMMARY\n   \ud83d\udfe2 HIGH OPPORTUNITY ENVIRONMENT\n   Market conditions are favorable for active bidding"
+}

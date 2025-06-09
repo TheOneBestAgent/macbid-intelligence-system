@@ -1,0 +1,102 @@
+{
+  "timestamp": "20250608_014046",
+  "summary": {
+    "total_items": 72,
+    "total_retail_value": 70286.38000000005,
+    "overall_discount": 41.15502889749057
+  },
+  "trends": {
+    "Electronics_Greenville": {
+      "category": "Electronics",
+      "location": "Greenville",
+      "avg_retail_price": 1202.058,
+      "avg_instant_win_price": 839,
+      "avg_discount_percent": 23.49984477285225,
+      "price_volatility": 7.253296344581442,
+      "sample_size": 5,
+      "trend_direction": "STABLE"
+    },
+    "Electronics_Anderson": {
+      "category": "Electronics",
+      "location": "Anderson",
+      "avg_retail_price": 1993.5366666666666,
+      "avg_instant_win_price": 1182.6666666666667,
+      "avg_discount_percent": 30.196325446277633,
+      "price_volatility": 17.747936739727532,
+      "sample_size": 3,
+      "trend_direction": "DECLINING"
+    },
+    "Audio Equipment_Rock Hill": {
+      "category": "Audio Equipment",
+      "location": "Rock Hill",
+      "avg_retail_price": 959.9864285714285,
+      "avg_instant_win_price": 629.8461538461538,
+      "avg_discount_percent": 23.564784114625688,
+      "price_volatility": 7.174207877732676,
+      "sample_size": 14,
+      "trend_direction": "STABLE"
+    },
+    "Appliances_Anderson": {
+      "category": "Appliances",
+      "location": "Anderson",
+      "avg_retail_price": 1819.0881818181817,
+      "avg_instant_win_price": 1175.2727272727273,
+      "avg_discount_percent": 36.375586428528756,
+      "price_volatility": 11.919385636538289,
+      "sample_size": 11,
+      "trend_direction": "DECLINING"
+    },
+    "Tools_Rock Hill": {
+      "category": "Tools",
+      "location": "Rock Hill",
+      "avg_retail_price": 434.415,
+      "avg_instant_win_price": 348.25,
+      "avg_discount_percent": 19.829714184754067,
+      "price_volatility": 0.0642002281285324,
+      "sample_size": 4,
+      "trend_direction": "STABLE"
+    },
+    "Tools_Gastonia": {
+      "category": "Tools",
+      "location": "Gastonia",
+      "avg_retail_price": 519.07,
+      "avg_instant_win_price": 395,
+      "avg_discount_percent": 35.14267335858545,
+      "price_volatility": 1.2832280287508753,
+      "sample_size": 3,
+      "trend_direction": "DECLINING"
+    },
+    "Luxury Items_Rock Hill": {
+      "category": "Luxury Items",
+      "location": "Rock Hill",
+      "avg_retail_price": 566.6433333333333,
+      "avg_instant_win_price": 351.6666666666667,
+      "avg_discount_percent": 37.4868466387925,
+      "price_volatility": 16.524988164687706,
+      "sample_size": 3,
+      "trend_direction": "DECLINING"
+    },
+    "Gaming_Rock Hill": {
+      "category": "Gaming",
+      "location": "Rock Hill",
+      "avg_retail_price": 332.87545454545455,
+      "avg_instant_win_price": 253.72727272727272,
+      "avg_discount_percent": 24.25597175205329,
+      "price_volatility": 10.448594883570216,
+      "sample_size": 11,
+      "trend_direction": "STABLE"
+    }
+  },
+  "alerts": [
+    {
+      "lot_id": 35598841,
+      "product_name": "Logitech G Wireless Gaming Headset ",
+      "category": "Gaming",
+      "alert_type": "PRICE_ANOMALY_HIGH",
+      "current_discount": 53.26947933583005,
+      "expected_discount": 24.25597175205329,
+      "deviation_percent": 29.013507583776757,
+      "message": "Unusual pricing: 53.3% discount vs expected 24.3%"
+    }
+  ]
+}

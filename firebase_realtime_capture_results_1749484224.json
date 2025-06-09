@@ -1,0 +1,31 @@
+{
+  "capture_result": {
+    "success": true,
+    "status_code": 200,
+    "gsessionid": "LAeWCKRIkc4mhWSM4zFu...",
+    "sid": "0klsvlmNaBubM6pDXIS8...",
+    "timestamp": "2025-06-09T11:48:24.266347",
+    "auction_lots": [],
+    "success_rate": 100.0
+  },
+  "session_status": {
+    "status": "ACTIVE",
+    "gsessionid": "LAeWCKRIkc4mhWSM4zFu...",
+    "sid": "0klsvlmNaBubM6pDXIS8...",
+    "timestamp": "2025-06-09T11:48:24.266347",
+    "auction_lots": [],
+    "success_rate": 100.0,
+    "capture_count": 2,
+    "last_test": {
+      "success": true,
+      "status_code": 200,
+      "gsessionid": "LAeWCKRIkc4mhWSM4zFu...",
+      "sid": "0klsvlmNaBubM6pDXIS8...",
+      "timestamp": "2025-06-09T11:48:24.266347",
+      "auction_lots": [],
+      "success_rate": 100.0
+    }
+  },
+  "timestamp": "2025-06-09T11:50:24.698352",
+  "integration_status": "READY_FOR_API_INTEGRATION"
+}

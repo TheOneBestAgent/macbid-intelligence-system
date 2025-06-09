@@ -1,0 +1,29 @@
+{
+  "total_budget": 400.0,
+  "daily_budget": 25.0,
+  "max_lots_per_auction": 5,
+  "max_concurrent_bids": 10,
+  "min_roi_threshold": 25.0,
+  "max_risk_level": "MEDIUM",
+  "preferred_categories": [
+    "Electronics",
+    "Computers",
+    "Home & Garden",
+    "Collectibles"
+  ],
+  "preferred_brands": [
+    "Apple",
+    "Samsung",
+    "Sony",
+    "LG",
+    "Dell",
+    "HP",
+    "Canon",
+    "Nikon"
+  ],
+  "auto_bid_enabled": true,
+  "snipe_timing_minutes": 5,
+  "dry_run_mode": true,
+  "max_bid_percentage": 80.0,
+  "confidence_threshold": 40.0
+}

@@ -1,0 +1,8 @@
+{
+  "customer_id": "2710619",
+  "tokens": {
+    "authorization": "Bearer YOUR_JWT_TOKEN_HERE"
+  },
+  "timestamp": 1749215352,
+  "note": "Replace YOUR_JWT_TOKEN_HERE with actual JWT token from browser dev tools"
+} 

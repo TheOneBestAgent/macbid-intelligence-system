@@ -1,0 +1,25 @@
+{
+  "capture_result": {
+    "success": false,
+    "status_code": 400,
+    "error": "<!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 400 (Bad Request)!!1</title>\n  <style>\n    *{",
+    "success_rate": 0.0
+  },
+  "session_status": {
+    "status": "EXPIRED",
+    "gsessionid": "hgpyx2kZyefNRKokgOt4...",
+    "sid": "lmTKFrLnGL0yxLa5jxrf...",
+    "timestamp": "2025-06-08T23:57:40.309301",
+    "auction_lots": [],
+    "success_rate": 0.0,
+    "capture_count": 0,
+    "last_test": {
+      "success": false,
+      "status_code": 400,
+      "error": "<!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 400 (Bad Request)!!1</title>\n  <style>\n    *{",
+      "success_rate": 0.0
+    }
+  },
+  "timestamp": "2025-06-08T23:57:40.674010",
+  "integration_status": "READY_FOR_API_INTEGRATION"
+}

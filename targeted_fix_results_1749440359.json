@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-06-08T23:39:19.501492",
+  "processing_time": 2.47,
+  "apis_targeted": 2,
+  "apis_fixed": 1,
+  "success_rate": 50.0,
+  "macbid_api": {
+    "url": "https://api.macdiscount.com/auctionsummary",
+    "customer_url": "https://api.macdiscount.com/auctions/customer/2710619/active-auctions",
+    "status": "working",
+    "priority": "HIGH",
+    "method": "basic_endpoint",
+    "lots_found": 10
+  },
+  "firebase_api": {
+    "url": "https://firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel",
+    "status": "not_working",
+    "priority": "HIGH"
+  },
+  "async_results": {
+    "macbid_async": {
+      "status": 200,
+      "success": true,
+      "size": 7307
+    },
+    "firebase_async": {
+      "status": 400,
+      "success": false,
+      "size": 0
+    }
+  }
+}
