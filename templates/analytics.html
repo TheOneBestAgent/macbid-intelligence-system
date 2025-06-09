@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac.bid Intelligence System - Analytics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-chart-line me-2"></i>
+                Mac.bid Intelligence System
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/"><i class="fas fa-tachometer-alt me-1"></i>Dashboard</a>
+                <a class="nav-link" href="/control"><i class="fas fa-cogs me-1"></i>Control Panel</a>
+                <a class="nav-link active" href="/analytics"><i class="fas fa-chart-bar me-1"></i>Analytics</a>
+                <a class="nav-link" href="/logs"><i class="fas fa-file-alt me-1"></i>Logs</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1 class="h3 mb-0">
+                        <i class="fas fa-chart-bar me-2"></i>Analytics Dashboard
+                    </h1>
+                    <button class="btn btn-outline-primary" onclick="refreshAnalytics()">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Metrics -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-robot fa-2x text-primary mb-2"></i>
+                        <h5 class="card-title">Automation Health</h5>
+                        <h3 class="text-primary" id="automation-health">-</h3>
+                        <small class="text-muted">System reliability</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-database fa-2x text-info mb-2"></i>
+                        <h5 class="card-title">Data Points</h5>
+                        <h3 class="text-info" id="data-points">-</h3>
+                        <small class="text-muted">Captured requests</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-bullseye fa-2x text-warning mb-2"></i>
+                        <h5 class="card-title">Opportunity Score</h5>
+                        <h3 class="text-warning" id="opportunity-score">-</h3>
+                        <small class="text-muted">Market potential</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-heartbeat fa-2x text-success mb-2"></i>
+                        <h5 class="card-title">System Health</h5>
+                        <h3 class="text-success" id="system-health">-</h3>
+                        <small class="text-muted">Overall status</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Intelligence Insights -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-brain me-2"></i>Market Intelligence Report
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="intelligence-report">
+                            <div class="text-center text-muted">
+                                <i class="fas fa-spinner fa-spin me-2"></i>Loading intelligence report...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pattern Analysis -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-map-marker-alt me-2"></i>Geographic Distribution
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="geographic-data">
+                            <div class="text-center text-muted">
+                                <i class="fas fa-spinner fa-spin me-2"></i>Loading geographic data...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-chart-pie me-2"></i>Endpoint Analysis
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="endpoint-data">
+                            <div class="text-center text-muted">
+                                <i class="fas fa-spinner fa-spin me-2"></i>Loading endpoint data...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script>
+        const socket = io();
+        
+        function loadAnalytics() {
+            // Load system health data
+            fetch('/api/system/health')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('system-health').textContent = data.overall_health.toFixed(1) + '%';
+                document.getElementById('automation-health').textContent = data.automation_health + '%';
+            })
+            .catch(error => {
+                console.error('Error loading health data:', error);
+            });
+            
+            // Load system data
+            fetch('/api/system/data')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('data-points').textContent = data.captured_requests || 0;
+                document.getElementById('opportunity-score').textContent = (data.opportunity_score || 0) + '/100';
+                
+                updateIntelligenceReport(data);
+                updateGeographicData(data);
+                updateEndpointData(data);
+            })
+            .catch(error => {
+                console.error('Error loading system data:', error);
+            });
+        }
+        
+        function updateIntelligenceReport(data) {
+            const container = document.getElementById('intelligence-report');
+            
+            if (data.processing_results && data.processing_results.intelligence_report) {
+                const report = data.processing_results.intelligence_report;
+                // Convert the report text to HTML with proper formatting
+                const formattedReport = report
+                    .replace(/\n/g, '<br>')
+                    .replace(/📊|🏛️|⏰|🏆|🎯|📈/g, '<i class="fas fa-chart-bar text-primary me-1"></i>')
+                    .replace(/•/g, '<i class="fas fa-arrow-right text-secondary me-1"></i>');
+                
+                container.innerHTML = `<div class="intelligence-report">${formattedReport}</div>`;
+            } else {
+                container.innerHTML = '<div class="text-muted">No intelligence report available</div>';
+            }
+        }
+        
+        function updateGeographicData(data) {
+            const container = document.getElementById('geographic-data');
+            
+            if (data.processing_results && data.processing_results.pattern_analysis) {
+                const geoData = data.processing_results.pattern_analysis.patterns.geographic_patterns;
+                if (geoData && Object.keys(geoData).length > 0) {
+                    let html = '<div class="row">';
+                    for (const [location, count] of Object.entries(geoData)) {
+                        const percentage = ((count / Object.values(geoData).reduce((a, b) => a + b, 0)) * 100).toFixed(1);
+                        html += `
+                            <div class="col-12 mb-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><i class="fas fa-map-marker-alt me-2 text-primary"></i>${location}</span>
+                                    <span class="badge bg-primary">${count} (${percentage}%)</span>
+                                </div>
+                                <div class="progress mt-1" style="height: 8px;">
+                                    <div class="progress-bar" style="width: ${percentage}%"></div>
+                                </div>
+                            </div>
+                        `;
+                    }
+                    html += '</div>';
+                    container.innerHTML = html;
+                } else {
+                    container.innerHTML = '<div class="text-muted">No geographic data available</div>';
+                }
+            } else {
+                container.innerHTML = '<div class="text-muted">No geographic data available</div>';
+            }
+        }
+        
+        function updateEndpointData(data) {
+            const container = document.getElementById('endpoint-data');
+            
+            if (data.processing_results && data.processing_results.pattern_analysis) {
+                const endpointData = data.processing_results.pattern_analysis.patterns.endpoint_frequency;
+                if (endpointData && Object.keys(endpointData).length > 0) {
+                    // Sort by frequency
+                    const sortedEndpoints = Object.entries(endpointData)
+                        .sort(([,a], [,b]) => b - a)
+                        .slice(0, 8); // Top 8 endpoints
+                    
+                    const total = Object.values(endpointData).reduce((a, b) => a + b, 0);
+                    
+                    let html = '<div class="row">';
+                    sortedEndpoints.forEach(([endpoint, count]) => {
+                        const percentage = ((count / total) * 100).toFixed(1);
+                        html += `
+                            <div class="col-12 mb-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><i class="fas fa-link me-2 text-info"></i>${endpoint}</span>
+                                    <span class="badge bg-info">${count} (${percentage}%)</span>
+                                </div>
+                                <div class="progress mt-1" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: ${percentage}%"></div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    html += '</div>';
+                    container.innerHTML = html;
+                } else {
+                    container.innerHTML = '<div class="text-muted">No endpoint data available</div>';
+                }
+            } else {
+                container.innerHTML = '<div class="text-muted">No endpoint data available</div>';
+            }
+        }
+        
+        function refreshAnalytics() {
+            loadAnalytics();
+        }
+        
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', function() {
+            loadAnalytics();
+            
+            // Auto-refresh every 30 seconds
+            setInterval(loadAnalytics, 30000);
+        });
+        
+        // Socket.IO events for real-time updates
+        socket.on('health_update', function(data) {
+            document.getElementById('system-health').textContent = data.overall_health.toFixed(1) + '%';
+            document.getElementById('automation-health').textContent = data.automation_health + '%';
+        });
+        
+        socket.on('data_update', function(data) {
+            updateIntelligenceReport(data);
+            updateGeographicData(data);
+            updateEndpointData(data);
+        });
+    </script>
+</body>
+</html> 
