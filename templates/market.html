@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac.bid Intelligence System - Market Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-chart-line me-2"></i>
+                Mac.bid Intelligence System
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/"><i class="fas fa-tachometer-alt me-1"></i>Dashboard</a>
+                <a class="nav-link" href="/control"><i class="fas fa-cogs me-1"></i>Control Panel</a>
+                <a class="nav-link" href="/analytics"><i class="fas fa-chart-bar me-1"></i>Analytics</a>
+                <a class="nav-link" href="/search"><i class="fas fa-search me-1"></i>Search</a>
+                <a class="nav-link" href="/bidding"><i class="fas fa-gavel me-1"></i>Bidding</a>
+                <a class="nav-link active" href="/market"><i class="fas fa-chart-line me-1"></i>Market</a>
+                <a class="nav-link" href="/logs"><i class="fas fa-file-alt me-1"></i>Logs</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1 class="h3 mb-0">
+                        <i class="fas fa-chart-line me-2"></i>Market Analysis & Pricing Intelligence
+                    </h1>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-primary" onclick="refreshData()">
+                            <i class="fas fa-sync me-1"></i>Refresh Data
+                        </button>
+                        <button class="btn btn-outline-success" onclick="exportReport()">
+                            <i class="fas fa-download me-1"></i>Export Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Market Overview -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-chart-line fa-2x text-success mb-2"></i>
+                        <h5 class="card-title">Market Trend</h5>
+                        <h3 class="text-success">+12.5%</h3>
+                        <small class="text-muted">vs last month</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-dollar-sign fa-2x text-primary mb-2"></i>
+                        <h5 class="card-title">Avg Price</h5>
+                        <h3 class="text-primary">$245</h3>
+                        <small class="text-muted">per item</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-fire fa-2x text-warning mb-2"></i>
+                        <h5 class="card-title">Hot Categories</h5>
+                        <h3 class="text-warning">Electronics</h3>
+                        <small class="text-muted">trending now</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-trophy fa-2x text-info mb-2"></i>
+                        <h5 class="card-title">Best Deals</h5>
+                        <h3 class="text-info">47</h3>
+                        <small class="text-muted">opportunities</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Price Trends & Analysis -->
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-chart-area me-2"></i>Price Trends Analysis
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle me-2"></i>
+                            Advanced price trend charts will be integrated with historical Mac.bid data
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-bullseye me-2"></i>Top Opportunities
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>MacBook Pro</strong>
+                                    <br><small class="text-muted">Electronics</small>
+                                </div>
+                                <span class="badge bg-success">85%</span>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>Samsung TV</strong>
+                                    <br><small class="text-muted">Electronics</small>
+                                </div>
+                                <span class="badge bg-warning">72%</span>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>DeWalt Tools</strong>
+                                    <br><small class="text-muted">Tools</small>
+                                </div>
+                                <span class="badge bg-success">91%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Analysis -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-tags me-2"></i>Category Performance Analysis
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="card border-primary">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Electronics</h6>
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span>Avg Price:</span>
+                                            <strong>$425</strong>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span>Volume:</span>
+                                            <strong>1,247 items</strong>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span>Trend:</span>
+                                            <span class="text-success">+15.2%</span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-primary" style="width: 85%"></div>
+                                        </div>
+                                        <small class="text-muted">Market Share: 85%</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-success">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Tools</h6>
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span>Avg Price:</span>
+                                            <strong>$125</strong>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span>Volume:</span>
+                                            <strong>892 items</strong>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span>Trend:</span>
+                                            <span class="text-success">+8.7%</span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" style="width: 65%"></div>
+                                        </div>
+                                        <small class="text-muted">Market Share: 65%</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-warning">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Appliances</h6>
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span>Avg Price:</span>
+                                            <strong>$185</strong>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span>Volume:</span>
+                                            <strong>634 items</strong>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span>Trend:</span>
+                                            <span class="text-warning">+3.1%</span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" style="width: 45%"></div>
+                                        </div>
+                                        <small class="text-muted">Market Share: 45%</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function refreshData() {
+            alert('Market data refresh functionality will be implemented');
+        }
+
+        function exportReport() {
+            alert('Export market report functionality will be implemented');
+        }
+    </script>
+</body>
+</html> 

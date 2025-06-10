@@ -281,6 +281,104 @@ def logs():
     """System logs viewer"""
     return render_template('logs.html')
 
+@app.route('/search')
+def search():
+    """Intelligent search page"""
+    return render_template('search.html')
+
+@app.route('/bidding')
+def bidding():
+    """Automated bidding page"""
+    return render_template('bidding.html')
+
+@app.route('/market')
+def market():
+    """Market analysis page"""
+    return render_template('market.html')
+
+# API endpoints for new features
+@app.route('/api/search', methods=['POST'])
+def api_search():
+    """API endpoint for intelligent search"""
+    try:
+        from intelligent_search_engine import IntelligentSearchEngine
+        
+        data = request.get_json()
+        search_engine = IntelligentSearchEngine()
+        results = search_engine.search_auctions(data)
+        
+        return jsonify(results)
+        
+    except Exception as e:
+        logger.error(f"Error in search API: {e}")
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/bidding/strategies')
+def api_bidding_strategies():
+    """API endpoint for bidding strategies"""
+    try:
+        from automated_bidding_system import AutomatedBiddingSystem
+        
+        bidding_system = AutomatedBiddingSystem()
+        strategies = bidding_system.get_bid_strategies()
+        
+        return jsonify({'strategies': strategies})
+        
+    except Exception as e:
+        logger.error(f"Error getting bidding strategies: {e}")
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/bidding/place', methods=['POST'])
+def api_place_bid():
+    """API endpoint for placing bids"""
+    try:
+        from automated_bidding_system import AutomatedBiddingSystem
+        
+        data = request.get_json()
+        bidding_system = AutomatedBiddingSystem()
+        result = bidding_system.place_bid(
+            data.get('item_id'),
+            data.get('item_title'),
+            data.get('bid_amount'),
+            data.get('strategy_id')
+        )
+        
+        return jsonify(result)
+        
+    except Exception as e:
+        logger.error(f"Error placing bid: {e}")
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/market/trends')
+def api_market_trends():
+    """API endpoint for market trends"""
+    try:
+        from market_analysis_engine import MarketAnalysisEngine
+        
+        market_engine = MarketAnalysisEngine()
+        trends = market_engine.analyze_market_trends()
+        
+        return jsonify(trends)
+        
+    except Exception as e:
+        logger.error(f"Error getting market trends: {e}")
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/market/report')
+def api_market_report():
+    """API endpoint for market report"""
+    try:
+        from market_analysis_engine import MarketAnalysisEngine
+        
+        market_engine = MarketAnalysisEngine()
+        report = market_engine.generate_market_report()
+        
+        return jsonify(report)
+        
+    except Exception as e:
+        logger.error(f"Error generating market report: {e}")
+        return jsonify({'error': str(e)}), 500
+
 @socketio.on('connect')
 def handle_connect():
     """Handle WebSocket connection"""
