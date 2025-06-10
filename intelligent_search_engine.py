@@ -259,7 +259,8 @@ class IntelligentSearchEngine:
             
             # Add enhanced data
             enhanced_item = {
-                'lot_id': item_data.get('id'),
+                'lot_id': item_data.get('lot_number') or item_data.get('inventory_id') or item_data.get('id'),
+                'aid': item_data.get('auction_id') or '48360',  # Default auction ID
                 'product_name': item_data.get('product_name', ''),
                 'title': item_data.get('product_name', ''),
                 'description': item_data.get('description', ''),
