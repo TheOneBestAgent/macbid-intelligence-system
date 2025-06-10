@@ -305,8 +305,8 @@
         }
 
         function viewDetails(itemId) {
-            // Open Mac.bid item page in new tab
-            window.open(`https://www.mac.bid/lots/${itemId}`, '_blank');
+            // Open Mac.bid item page in new tab with correct URL format
+            window.open(`https://www.mac.bid/?aid=48360&lid=${itemId}`, '_blank');
         }
 
         function addToWatchlist(itemId) {
